@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tuyoly | Web, Security, AI Tools</title>
+  <meta name="description" content="Tuyoly 的个人博客和数字工作台，记录 Web 开发、网络安全、AI 工具、自动化脚本与从想法到 MVP 的实践过程。">
+  <meta name="author" content="Tuyoly">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tuyoly1.github.io/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tuyoly Blog">
+  <meta property="og:title" content="Tuyoly | Web, Security, AI Tools">
+  <meta property="og:description" content="一个持续折腾 Web、安全、AI 工具和自动化的个人工作台。">
+  <meta property="og:url" content="https://tuyoly1.github.io/blog/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tuyoly | Web, Security, AI Tools">
+  <meta name="twitter:description" content="记录从想法到 MVP 的真实过程。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080d0e'/%3E%3Cpath d='M16 20h32v6H16zM16 30h22v6H16zM16 40h30v6H16z' fill='%238be9e7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+
+  <header class="site-header" data-header>
+    <nav class="nav-shell" aria-label="主导航">
+      <a class="brand" href="#home" aria-label="Tuyoly home">
+        <span class="brand-mark">Tuyoly</span>
+        <span class="brand-caret" aria-hidden="true">/blog</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="打开导航">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="site-menu">
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#notes">文章</a>
+        <a href="#contact">联系</a>
+      </div>
+
+      <div class="social-links" aria-label="社交链接">
+        <a href="https://github.com/tuyoly1" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.1-1.47-1.1-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.57 9.57 0 0 1 12 6.01c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a href="https://x.com/xwgutoly" target="_blank" rel="noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.9 10.45 21.35 2h-1.77l-6.46 7.33L7.95 2H2l7.82 11.1L2 22h1.77l6.84-7.77L16.08 22H22l-8.1-11.55Zm-2.42 2.75-.79-1.1-6.3-8.8H7.1l5.08 7.1.79 1.1 6.61 9.24h-2.72l-5.38-7.54Z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@Tuyoly-918" target="_blank" rel="noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.58 7.19a2.73 2.73 0 0 0-1.92-1.93C17.96 4.8 12 4.8 12 4.8s-5.96 0-7.66.46A2.73 2.73 0 0 0 2.42 7.2C1.96 8.9 1.96 12.45 1.96 12.45s0 3.55.46 5.25c.25.93.99 1.67 1.92 1.92 1.7.46 7.66.46 7.66.46s5.96 0 7.66-.46a2.73 2.73 0 0 0 1.92-1.92c.46-1.7.46-5.25.46-5.25s0-3.55-.46-5.26ZM10 15.7V9.2l5.23 3.25L10 15.7Z"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Tuyoly's digital workbench</p>
+          <h1 id="hero-title">ship small tools, keep honest notes.</h1>
+          <p class="hero-subtitle">
+            把 Web 开发、网络安全、AI 工具和自动化实验放在同一张桌面上。
+            <span>Building web experiments, security labs, AI utilities, and notes from idea to MVP.</span>
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-ghost" href="https://x.com/xwgutoly" target="_blank" rel="noreferrer">Follow on X</a>
+          </div>
+        </div>
+
+        <aside class="worklog-panel reveal" aria-label="近期工作日志">
+          <div class="panel-bar">
+            <span class="dot dot-hot"></span>
+            <span class="dot dot-cool"></span>
+            <span class="dot dot-idle"></span>
+            <span class="panel-title">git log --workbench --oneline</span>
+          </div>
+          <div class="log-stream">
+            <article>
+              <time datetime="2026-06-18">06-18</time>
+              <strong>mvp</strong>
+              <span>整理 GitHub 项目搜索工具的 API 查询流</span>
+            </article>
+            <article>
+              <time datetime="2026-06-14">06-14</time>
+              <strong>lab</strong>
+              <span>复盘 Suricata 告警和小型 SOC 数据链路</span>
+            </article>
+            <article>
+              <time datetime="2026-06-09">06-09</time>
+              <strong>note</strong>
+              <span>Cloudflare Pages、DNS、缓存配置踩坑记录</span>
+            </article>
+            <article>
+              <time datetime="2026-06-02">06-02</time>
+              <strong>tool</strong>
+              <span>把简历定制流程拆成可复用的 AI 自动化步骤</span>
+            </article>
+          </div>
+          <div class="bench-meter" aria-hidden="true">
+            <span style="--level: 78%"></span>
+            <span style="--level: 46%"></span>
+            <span style="--level: 64%"></span>
+            <span style="--level: 31%"></span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">不是包装简历，是持续开机的笔记本。</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            我是 Tuyoly，一个独立折腾技术的人。看到有意思的工具会先装起来试，遇到重复问题会想办法写脚本，碰到不清楚的机制就拆开做个小实验。
+          </p>
+          <p>
+            这个博客记录 Web 开发、网络安全、AI 工具和自动化相关的实践：从一个想法到能跑的 MVP，从配置失败到问题复盘，从别人看起来很小的工具，到我自己真的会反复使用的工作流。
+          </p>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-row">
+            <span>mode</span>
+            <strong>project-driven learning</strong>
+          </div>
+          <div class="status-row">
+            <span>focus</span>
+            <strong>web / security / ai tools</strong>
+          </div>
+          <div class="status-row">
+            <span>output</span>
+            <strong>notes, labs, small utilities</strong>
+          </div>
+          <div class="status-row">
+            <span>clock</span>
+            <strong data-local-time>--:--</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section focus-section" aria-labelledby="focus-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Focus Map</p>
+        <h2 id="focus-title">关注方向按真实使用频率排布。</h2>
+      </div>
+      <div class="focus-layout reveal">
+        <article class="focus-primary">
+          <span class="focus-index">01</span>
+          <h3>Web 开发</h3>
+          <p>用 HTML、CSS、JavaScript 和 API 把想法快速搭成可访问、可部署、可维护的小工具。</p>
+        </article>
+        <article class="focus-primary">
+          <span class="focus-index">02</span>
+          <h3>网络安全</h3>
+          <p>通过 Suricata、Linux、日志分析和小型 SOC 实验理解攻击面、告警和防守流程。</p>
+        </article>
+        <article class="focus-primary">
+          <span class="focus-index">03</span>
+          <h3>AI 工具与应用</h3>
+          <p>把 AI 放进具体工作流：翻译、简历定制、资料整理、自动化辅助，而不是只停留在演示。</p>
+        </article>
+        <div class="focus-secondary" aria-label="其它关注方向">
+          <span>Cloudflare 部署</span>
+          <span>GitHub 开源</span>
+          <span>自动化脚本</span>
+          <span>DNS 与 Pages</span>
+          <span>踩坑记录</span>
+          <span>MVP 迭代</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-title">不是陈列柜，是正在被改动的工具箱。</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-card-wide reveal">
+          <div>
+            <p class="card-kicker">search utility</p>
+            <h3>GitHub Project Search</h3>
+            <p>一个搜索和浏览 GitHub 项目的工具，用来快速发现可学习、可复用、可改造的代码。</p>
+          </div>
+          <div class="tag-row">
+            <span>JavaScript</span>
+            <span>API</span>
+            <span>Search</span>
+          </div>
+          <a class="card-link" href="#">Open project</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div>
+            <p class="card-kicker">document workflow</p>
+            <h3>CET-6 PDF Translator</h3>
+            <p>英语六级 PDF 翻译辅助工具，帮助把资料处理成更适合复习和摘录的格式。</p>
+          </div>
+          <div class="tag-row">
+            <span>Python</span>
+            <span>PDF</span>
+            <span>NLP</span>
+          </div>
+          <a class="card-link" href="#">Open project</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div>
+            <p class="card-kicker">ai automation</p>
+            <h3>Resume Tailor</h3>
+            <p>根据职位描述定制简历的工具，把岗位关键词、项目表达和版本管理串起来。</p>
+          </div>
+          <div class="tag-row">
+            <span>AI</span>
+            <span>Python</span>
+            <span>Automation</span>
+          </div>
+          <a class="card-link" href="#">Open project</a>
+        </article>
+
+        <article class="project-card project-card-tall reveal">
+          <div>
+            <p class="card-kicker">security lab</p>
+            <h3>Mini SOC / Suricata</h3>
+            <p>小型安全运营中心实验，从流量、规则、告警到 Linux 环境中的排查路径。</p>
+          </div>
+          <div class="tag-row">
+            <span>Security</span>
+            <span>Suricata</span>
+            <span>Linux</span>
+          </div>
+          <a class="card-link" href="#">Open project</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div>
+            <p class="card-kicker">site system</p>
+            <h3>Personal Blog</h3>
+            <p>这个博客本身，保持简单可部署，也保持足够清晰，方便继续添加文章和项目。</p>
+          </div>
+          <div class="tag-row">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>GitHub Pages</span>
+          </div>
+          <a class="card-link" href="#">Open project</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div>
+            <p class="card-kicker">deployment notes</p>
+            <h3>Cloudflare Deployment Notes</h3>
+            <p>Cloudflare 部署笔记和配置记录，把 DNS、Pages、缓存这些细节留成可复查的轨迹。</p>
+          </div>
+          <div class="tag-row">
+            <span>Cloudflare</span>
+            <span>DNS</span>
+            <span>DevOps</span>
+          </div>
+          <a class="card-link" href="#">Read notes</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section notes-section" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Notes</p>
+        <h2 id="notes-title">把踩坑留下来，下一次少绕一点路。</h2>
+      </div>
+      <div class="notes-list">
+        <article class="note-card reveal">
+          <time datetime="2026-06-20">2026.06.20</time>
+          <h3>How I Built My Personal Blog</h3>
+          <p>记录从页面信息架构、视觉方向到 GitHub Pages 部署的完整过程。</p>
+          <a href="#">Read note</a>
+        </article>
+        <article class="note-card reveal">
+          <time datetime="2026-06-16">2026.06.16</time>
+          <h3>Notes on Cloudflare and GitHub Pages</h3>
+          <p>整理域名、DNS、Pages、缓存和静态资源路径相关的配置经验。</p>
+          <a href="#">Read note</a>
+        </article>
+        <article class="note-card reveal">
+          <time datetime="2026-06-09">2026.06.09</time>
+          <h3>Building Small AI Tools</h3>
+          <p>把 AI 从聊天窗口搬进具体任务流时，我会先关注输入、输出和可复用步骤。</p>
+          <a href="#">Read note</a>
+        </article>
+        <article class="note-card reveal">
+          <time datetime="2026-06-01">2026.06.01</time>
+          <h3>Security Learning Roadmap</h3>
+          <p>从 Linux、网络基础、日志、规则到小型 SOC 实验的学习路线草稿。</p>
+          <a href="#">Read note</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">如果你也在做小工具、写笔记、搭实验，可以来聊。</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/tuyoly1" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>github.com/tuyoly1</strong>
+          </a>
+          <a href="https://x.com/xwgutoly" target="_blank" rel="noreferrer">
+            <span>X</span>
+            <strong>x.com/xwgutoly</strong>
+          </a>
+          <a href="https://www.youtube.com/@Tuyoly-918" target="_blank" rel="noreferrer">
+            <span>YouTube</span>
+            <strong>@Tuyoly-918</strong>
+          </a>
+          <a href="mailto:xiaoxi918aa@gmail.com">
+            <span>Email</span>
+            <strong>xiaoxi918aa@gmail.com</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Tuyoly. Built with curiosity.</p>
+  </footer>
+</body>
+</html>
