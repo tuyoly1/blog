@@ -14,8 +14,11 @@
   --border-strong: rgba(31, 45, 40, 0.28);
   --accent: #ff6f4f;
   --accent-2: #27b894;
+  --glow: #69b7ff;
+  --glow-soft: rgba(105, 183, 255, 0.42);
   --tag: rgba(39, 184, 148, 0.12);
   --shadow: 0 24px 80px rgba(47, 34, 22, 0.13);
+  --shadow-glow: 0 0 22px rgba(105, 183, 255, 0.18);
   --radius: 20px;
   --content: 1080px;
 }
@@ -97,6 +100,7 @@ a:hover {
   font-size: 19px;
   font-weight: 760;
   letter-spacing: 0;
+  text-shadow: 0 0 12px rgba(105, 183, 255, 0.45);
 }
 
 .nav-links {
@@ -169,13 +173,25 @@ a:hover {
   font-size: clamp(56px, 8vw, 86px);
   line-height: 0.95;
   letter-spacing: 0;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.22),
+    0 0 24px rgba(105, 183, 255, 0.35),
+    0 0 44px rgba(105, 183, 255, 0.18);
 }
 
 .lead {
+  width: 24ch;
+  max-width: 100%;
   margin: 22px 0 0;
-  color: var(--text);
-  font-size: clamp(21px, 3vw, 28px);
-  line-height: 1.32;
+  overflow: hidden;
+  border-right: 3px solid var(--glow);
+  color: #135f83;
+  font: 700 clamp(1.05rem, 4.8vw, 1.5rem)/1.32 "Courier New", Courier, monospace;
+  text-shadow: 0 0 14px rgba(105, 183, 255, 0.34);
+  white-space: nowrap;
+  animation:
+    typing 2.4s steps(24, end),
+    blink-caret 0.78s step-end infinite;
 }
 
 .intro {
@@ -203,7 +219,7 @@ a:hover {
   color: var(--text);
   font-weight: 700;
   padding: 10px 17px;
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
 .button:hover {
@@ -217,6 +233,11 @@ a:hover {
   border-color: transparent;
   background: var(--panel);
   color: var(--text-invert);
+  box-shadow: 0 0 16px rgba(105, 183, 255, 0.24);
+}
+
+.button.primary:hover {
+  box-shadow: 0 0 26px rgba(105, 183, 255, 0.46);
 }
 
 .hero-card {
@@ -226,8 +247,23 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
+  border-color: rgba(105, 183, 255, 0.22);
   background: linear-gradient(160deg, var(--panel), #183b34);
+  box-shadow:
+    inset 0 0 24px rgba(105, 183, 255, 0.06),
+    var(--shadow),
+    var(--shadow-glow);
   color: var(--text-invert);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(105, 183, 255, 0.48);
+  box-shadow:
+    inset 0 0 28px rgba(105, 183, 255, 0.1),
+    var(--shadow),
+    0 0 34px rgba(105, 183, 255, 0.22);
 }
 
 .card-topline {
@@ -272,7 +308,15 @@ a:hover {
 .hero-card .focus-pills span {
   border-color: rgba(216, 255, 240, 0.16);
   background: rgba(39, 184, 148, 0.18);
+  box-shadow: 0 0 10px rgba(105, 183, 255, 0.08);
   color: #d8fff0;
+  transition: background 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.hero-card .focus-pills span:hover {
+  border-color: rgba(105, 183, 255, 0.38);
+  background: rgba(105, 183, 255, 0.16);
+  box-shadow: 0 0 16px rgba(105, 183, 255, 0.32);
 }
 
 .section {
@@ -359,6 +403,40 @@ a:hover {
 
 .footer p {
   margin: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--glow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lead {
+    animation: none;
+    border-right-color: transparent;
+  }
+
+  .button,
+  .hero-card,
+  .hero-card .focus-pills span {
+    transition: none;
+  }
 }
 
 @media (max-width: 900px) {

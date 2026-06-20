@@ -5,7 +5,7 @@
 ## 内容
 
 - `index.html`：页面结构、SEO 信息和个人联系方式。
-- `style.css`：现代配色、响应式布局和基础 hover 样式。
+- `style.css`：现代配色、响应式布局、Neon Glow 和 Typewriter 效果。
 - `script.js`：移动端菜单和页面内锚点滚动。
 
 ## 本地预览
@@ -32,4 +32,4 @@ https://tuyoly1.github.io/blog/
 
 ## 维护
 
-页面保持轻量结构，后续可以在 `index.html` 中按需重新加入项目或文章区域。
+页面保持轻量结构，后续可以在 `index.html` 中按需重新加入项目或文章区域。主视觉动效集中在 `style.css` 的 `.lead`、`.hero-card` 和按钮样式中。
