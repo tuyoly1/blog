@@ -1,11 +1,11 @@
 # Tuyoly Blog
 
-一个现代风格的个人博客主页，用来展示 Tuyoly 的个人信息、项目、笔记和联系方式。
+一个现代风格的个人博客主页，用来展示 Tuyoly 的个人信息和联系方式。
 
 ## 内容
 
-- `index.html`：页面结构、SEO 信息、项目和文章占位内容。
-- `style.css`：现代配色、响应式布局、项目卡片和基础 hover 样式。
+- `index.html`：页面结构、SEO 信息和个人联系方式。
+- `style.css`：现代配色、响应式布局和基础 hover 样式。
 - `script.js`：移动端菜单和页面内锚点滚动。
 
 ## 本地预览
@@ -30,8 +30,6 @@ http://localhost:4173/
 https://tuyoly1.github.io/blog/
 ```
 
-## 更新内容
+## 维护
 
-新增项目：在 `index.html` 的 `#projects` 区域复制一个 `.project`。
-
-新增文章：在 `#notes` 区域复制一个 `.note`。
+页面保持轻量结构，后续可以在 `index.html` 中按需重新加入项目或文章区域。
