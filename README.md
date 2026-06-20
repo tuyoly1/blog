@@ -1,46 +1,37 @@
 # Tuyoly Blog
 
-Tuyoly 的个人博客主页，一个偏数字工作台气质的静态站点。页面用于记录 Web 开发、网络安全、AI 工具、自动化脚本和从想法到 MVP 的实践过程。
+一个简洁、轻量的个人博客主页，用来展示 Tuyoly 的个人信息、项目、笔记和联系方式。
 
-## Files
+## 内容
 
-- `index.html`：页面结构、SEO、内容区块和社交链接。
-- `style.css`：深色主题、响应式布局、卡片和动效。
-- `script.js`：导航状态、移动端菜单、首次出现淡入和本地时钟。
+- `index.html`：页面结构、SEO 信息、项目和文章占位内容。
+- `style.css`：浅色主题、响应式布局和基础 hover 样式。
+- `script.js`：移动端菜单和页面内锚点滚动。
 
-## Design Notes
+## 本地预览
 
-配色选择了石墨黑、深青边界、冰青高光和少量琥珀色状态点。这样比常见蓝紫渐变更接近深夜工作台、终端日志和安全仪表盘的感觉，同时仍然保持文本可读性。
-
-页面刻意避免模板站常见的全屏空洞 hero、等宽技能卡片和过度装饰，把重点放在近期工作日志、关注方向、项目和笔记上。
-
-## Local Preview
-
-直接打开 `index.html` 即可预览。也可以在仓库根目录启动任意静态服务器：
+可以直接打开 `index.html`，也可以在仓库根目录启动一个静态服务器：
 
 ```bash
 python -m http.server 4173
 ```
 
-Then open:
+然后访问：
 
 ```text
 http://localhost:4173/
 ```
 
-## GitHub Pages
+## 部署
 
-所有资源都使用相对路径：
+页面使用纯 HTML、CSS 和 JavaScript，不依赖框架或后端。资源路径使用相对路径，适合部署到 GitHub Pages 的 `/blog/` 子路径：
 
-```html
-<link rel="stylesheet" href="./style.css">
-<script src="./script.js" defer></script>
+```text
+https://tuyoly1.github.io/blog/
 ```
 
-因此可以部署在 `https://tuyoly1.github.io/blog/` 这样的子路径下。
+## 更新内容
 
-## Updating Content
+新增项目：在 `index.html` 的 `#projects` 区域复制一个 `.project`。
 
-新增项目时，在 `index.html` 的 `#projects` 区域复制一个 `.project-card`，修改项目名、说明、标签和链接。
-
-新增文章时，在 `#notes` 区域复制一个 `.note-card`，修改日期、标题、摘要和链接。以后如果文章变多，可以把 `notes` 拆成独立列表页。
+新增文章：在 `#notes` 区域复制一个 `.note`。
