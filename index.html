@@ -17,76 +17,62 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tuyoly | Personal Blog">
   <meta name="twitter:description" content="Web, Security, AI Tools, and personal notes.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312161d'/%3E%3Cpath d='M17 18h30v7H36v22h-8V25H17z' fill='%2369b7ff'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Cpath d='M17 18h30v7H36v22h-8V25H17z' fill='%2389aacc'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" defer></script>
   <script src="./script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到内容</a>
 
   <header class="site-header">
-    <nav class="nav" aria-label="主导航">
-      <a class="brand" href="#top" aria-label="Tuyoly home">Tuyoly</a>
-
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
-        <span>Menu</span>
-      </button>
-
+    <nav class="nav-pill" aria-label="主导航">
+      <a class="nav-logo" href="#top" aria-label="Tuyoly home">
+        <span class="logo-ring"><span>Ty</span></span>
+      </a>
+      <span class="nav-divider" aria-hidden="true"></span>
       <div class="nav-links" id="site-menu">
-        <a href="#about">About</a>
+        <a href="#top" class="is-active">Home</a>
         <a href="#contact">Contact</a>
         <a href="https://github.com/tuyoly1" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://x.com/xwgutoly" target="_blank" rel="noreferrer">X</a>
       </div>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a class="say-hi" href="mailto:xiaoxi918aa@gmail.com">Say hi <span aria-hidden="true">↗</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
     </nav>
   </header>
 
-  <main id="main" class="page">
+  <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Personal Blog</p>
-        <h1 id="hero-title">Tuyoly</h1>
-        <p class="lead">Web, Security, AI Tools.</p>
-        <p class="intro">
-          记录技术学习、项目开发和一些真实的折腾过程。
+      <video class="hero-video" id="hero-video" autoplay muted loop playsinline poster="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_195923_b0ba8ace-1d1d-4f2c-9a28-1ab84b330680.png&w=1280&q=85"></video>
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-bottom-fade" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow blur-in">Collection '26</p>
+        <h1 id="hero-title" class="name-reveal font-display">Tuyoly</h1>
+        <p class="role-line blur-in">A <span id="role-word">Security</span> builder records real notes.</p>
+        <p class="hero-description blur-in">
+          记录 Web 开发、网络安全、AI 工具和自动化项目。从一个想法开始，试工具、踩坑、做 MVP，然后把过程留下来。
         </p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/tuyoly1" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="button" href="https://x.com/xwgutoly" target="_blank" rel="noreferrer">Twitter / X</a>
+        <div class="hero-actions blur-in">
+          <a class="button solid" href="#contact">Contact</a>
+          <a class="button outline" href="https://github.com/tuyoly1" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
 
-      <aside class="hero-card" aria-label="当前关注">
-        <div class="card-topline">
-          <span>Now</span>
-          <strong>Building small tools.</strong>
-        </div>
-        <p>Web 开发、网络安全、AI 工具和自动化。</p>
-        <div class="focus-pills">
-          <span>Web Dev</span>
-          <span>Security</span>
-          <span>AI Tools</span>
-          <span>Automation</span>
-        </div>
-      </aside>
+      <a class="scroll-indicator" href="#contact" aria-label="Scroll to contact">
+        <span>Scroll</span>
+        <i aria-hidden="true"></i>
+      </a>
     </section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div class="section-heading">
-        <p class="section-kicker">About</p>
-        <h2 id="about-title">About</h2>
-      </div>
-      <p>
-        我关注 Web 开发、网络安全、AI 工具和自动化项目。这个博客用来记录学习笔记、项目过程和部署踩坑。
-      </p>
-    </section>
-
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-panel">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Contact</h2>
-        </div>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-content">
+        <p class="section-eyebrow"><span></span>Contact</p>
+        <h2 id="contact-title">Let’s keep <em>building</em>.</h2>
         <div class="contact-links">
           <a href="https://github.com/tuyoly1" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/tuyoly1</strong></a>
           <a href="https://x.com/xwgutoly" target="_blank" rel="noreferrer"><span>X / Twitter</span><strong>x.com/xwgutoly</strong></a>
